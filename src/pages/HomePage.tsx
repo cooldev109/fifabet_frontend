@@ -56,7 +56,6 @@ export function HomePage({
     // Generate table rows
     const tableRows = matches.map((match) => {
       const league = leagueNames[match.league_id] || `League ${match.league_id}`;
-      const _target = targetGoalLines[match.league_id] ?? 1.5;
       const score = match.final_score_home !== undefined && match.final_score_away !== undefined
         ? `${match.final_score_home} - ${match.final_score_away}`
         : match.current_score || '-';
