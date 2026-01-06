@@ -204,7 +204,7 @@ export function LeagueDetailPage() {
                   tickFormatter={(value) => `${value}%`}
                 />
                 <Tooltip
-                  formatter={(value: number) => [`${value}%`, 'Hit Rate']}
+                  formatter={(value) => [`${value}%`, 'Hit Rate']}
                   labelFormatter={(label) => `Goal Line: ${label}`}
                   contentStyle={{ borderRadius: '8px', border: '1px solid #e5e7eb' }}
                 />
@@ -259,7 +259,7 @@ export function LeagueDetailPage() {
                 <XAxis dataKey="goalLine" tick={{ fontSize: 12 }} />
                 <YAxis tick={{ fontSize: 12 }} tickFormatter={(value) => `${value}%`} />
                 <Tooltip
-                  formatter={(value: number) => [`${value}%`, 'ROI']}
+                  formatter={(value) => [`${value}%`, 'ROI']}
                   labelFormatter={(label) => `Goal Line: ${label}`}
                   contentStyle={{ borderRadius: '8px', border: '1px solid #e5e7eb' }}
                 />
@@ -311,7 +311,7 @@ export function LeagueDetailPage() {
               <XAxis dataKey="goalLine" tick={{ fontSize: 12 }} />
               <YAxis tick={{ fontSize: 12 }} />
               <Tooltip
-                formatter={(value: number) => [value, 'Times Available']}
+                formatter={(value) => [value, 'Times Available']}
                 labelFormatter={(label) => `Goal Line: ${label}`}
                 contentStyle={{ borderRadius: '8px', border: '1px solid #e5e7eb' }}
               />
