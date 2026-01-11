@@ -66,61 +66,47 @@ export function LandingPage({ onLogin, onSignUp }: LandingPageProps) {
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: '#0f172a',
+      position: 'relative',
     }}>
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0,
+        }}
+      >
+        <source src="/test.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay for better readability */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(15, 23, 42, 0.75)',
+        zIndex: 1,
+      }} />
+
       {/* Banner Section */}
       <div style={{
-        background: 'linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1a1a2e 100%)',
+        background: 'transparent',
         padding: '60px 24px',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
+        zIndex: 2,
       }}>
-        {/* Animated background elements */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: `
-            radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-            radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%)
-          `,
-          pointerEvents: 'none',
-        }} />
-
-        {/* Floating icons decoration */}
-        <div style={{
-          position: 'absolute',
-          top: '20%',
-          left: '10%',
-          fontSize: '48px',
-          opacity: 0.2,
-          transform: 'rotate(-15deg)',
-        }}>⚽</div>
-        <div style={{
-          position: 'absolute',
-          top: '60%',
-          left: '5%',
-          fontSize: '36px',
-          opacity: 0.15,
-        }}>📊</div>
-        <div style={{
-          position: 'absolute',
-          top: '30%',
-          right: '8%',
-          fontSize: '42px',
-          opacity: 0.2,
-          transform: 'rotate(10deg)',
-        }}>📈</div>
-        <div style={{
-          position: 'absolute',
-          bottom: '20%',
-          right: '12%',
-          fontSize: '32px',
-          opacity: 0.15,
-        }}>🎯</div>
 
         {/* Logo and Title */}
         <div style={{ position: 'relative', zIndex: 1 }}>
@@ -237,7 +223,9 @@ export function LandingPage({ onLogin, onSignUp }: LandingPageProps) {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '48px 24px',
-        background: 'linear-gradient(180deg, #0f172a 0%, #1e293b 100%)',
+        background: 'transparent',
+        position: 'relative',
+        zIndex: 2,
       }}>
         <div style={{
           width: '100%',
@@ -484,8 +472,10 @@ export function LandingPage({ onLogin, onSignUp }: LandingPageProps) {
       <div style={{
         padding: '20px',
         textAlign: 'center',
-        background: '#0f172a',
+        background: 'rgba(15, 23, 42, 0.8)',
         borderTop: '1px solid rgba(255,255,255,0.05)',
+        position: 'relative',
+        zIndex: 2,
       }}>
         <p style={{ color: '#475569', fontSize: '13px' }}>
           © 2024 Bet Tracker. Professional eSoccer monitoring platform.
